@@ -14,7 +14,7 @@ public class BoardDto {
     private String author;
     private String title;
     private String content;
-//    private Long fileId;
+    private Long fileId;
     private LocalDateTime createdDate;
     private LocalDateTime modifiedDate;
 
@@ -24,7 +24,7 @@ public class BoardDto {
                 .author(author)
                 .title(title)
                 .content(content)
-//                .fileId(fileId)
+                .fileId(fileId)
                 .build();
         return build;
     }
@@ -35,7 +35,7 @@ public class BoardDto {
         this.author = author;
         this.title = title;
         this.content = content;
-//        this.fileId = fileId;
+        this.fileId = fileId;
         this.createdDate = createdDate;
         this.modifiedDate = modifiedDate;
     }

@@ -30,8 +30,8 @@ public class Board {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-//    @Column
-//    private Long fileId;
+    @Column
+    private Long fileId;
 
     @CreatedDate
     @Column(updatable = false)
@@ -46,6 +46,6 @@ public class Board {
         this.author = author;
         this.title = title;
         this.content = content;
-//        this.fileId = fileId;
+        this.fileId = fileId;
     }
 }
