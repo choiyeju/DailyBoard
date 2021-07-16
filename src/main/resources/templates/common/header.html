@@ -1,7 +1,9 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <div class="navbar navbar-dark bg-dark shadow-sm mb-3">
     <div class="container d-flex justify-content-between">
         <a href="/" class="navbar-brand d-flex align-items-center">
             <strong>게시판</strong>
+            <a sec:authorize="isAnonymous()" th:href="@{/home}"><input class="btn btn-primary" type="submit" role="button" value="로그인"></a>
         </a>
     </div>
 </div>
