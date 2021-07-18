@@ -37,17 +37,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/**").permitAll()
                 .and()
-                .formLogin()
-                .loginPage("/templates/home/index")
-                .defaultSuccessUrl("/")
+            .formLogin()
+                .loginPage("/home/loginForm")
+                .defaultSuccessUrl("/home")
                 .permitAll()
                 .and()
-                .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/templates/member/logout"))
-                .logoutSuccessUrl("/")
+            .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/home/logout"))
+                .logoutSuccessUrl("/home")
                 .invalidateHttpSession(true)
                 .and()
-                .exceptionHandling();
+            .exceptionHandling();
     }
 
     @Override

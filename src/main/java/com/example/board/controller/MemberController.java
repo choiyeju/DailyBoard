@@ -41,7 +41,6 @@ public class MemberController {
         return "member/loginForm.html";
     }
 
-
     @GetMapping("/home/signupForm/{id}")
     public String detail(@PathVariable("id") Long id, Model model) {
         MemberDto memberDto = memberService.getPost(id);
